@@ -8,7 +8,7 @@ An educational web application featuring an interactive periodic table and compr
 ## Features
 
 ### Interactive Periodic Table
-![Periodic Table Interface](https://i.imgur.com/GO0vtOE)
+![Periodic Table Interface](https://github.com/dan-squared/Periodic/blob/cf09a96c7480db539fb49013a008cc78e4c3baf9/Properties.png)
 - **Complete Element Data**: All 118 elements with detailed properties including atomic number, symbol, name, mass, electron configuration, and more
 - **Interactive Element Cells**: Click on any element to view comprehensive details
 - **Visual Element Categories**: Color-coded element categorization (metals, non-metals, metalloids, etc.)
