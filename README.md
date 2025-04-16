@@ -1,12 +1,14 @@
-# Interactive Periodic Table Application
+
+ # Interactive Periodic Table Application
 
 An educational web application featuring an interactive periodic table and comprehensive chemistry lessons built with Next.js, React, and TypeScript.
 
-![Interactive Periodic Table]([https://i.imgur.com/example-screenshot.png])
+![Interactive Periodic Table](https://i.imgur.com/OCZYnLu.png)
 
 ## Features
 
 ### Interactive Periodic Table
+![Periodic Table Interface](https://i.imgur.com/GO0vtOE.png)
 - **Complete Element Data**: All 118 elements with detailed properties including atomic number, symbol, name, mass, electron configuration, and more
 - **Interactive Element Cells**: Click on any element to view comprehensive details
 - **Visual Element Categories**: Color-coded element categorization (metals, non-metals, metalloids, etc.)
@@ -16,13 +18,15 @@ An educational web application featuring an interactive periodic table and compr
 
 ### Detailed Element Information
 - **Physical Properties**: Melting point, boiling point, density
+![Element Details](https://i.imgur.com/FRQSaqR.png)
 - **Atomic Properties**: Electron configuration, atomic radius, ionization energy
 - **Historical Information**: Discovery, naming, and historical significance
 - **Visual Representations**: Atom structure visualizations
+![Atom Visualization](https://i.imgur.com/LiIMjnt.png)
 - **Real-world Applications**: Common uses and applications
 
 ### Chemistry Lessons
-
+![Chemistry Lessons](https://i.imgur.com/Yp9kIf9.png)
 #### Organic Chemistry Lesson
 - **Interactive Functional Groups**: Visual exploration of different functional groups
 - **Molecular Structure Visualization**: 2D representations of chemical structures
@@ -42,6 +46,7 @@ An educational web application featuring an interactive periodic table and compr
   - Dipole-dipole interactions
   - Hydrogen bonding
 - **Interactive Controls**: Adjust parameters to see effects on bonding
+
 
 ## Technical Stack
 
