@@ -18,7 +18,7 @@ An educational web application featuring an interactive periodic table and compr
 
 ### Detailed Element Information
 - **Physical Properties**: Melting point, boiling point, density
-![Element Details](https://github.com/dan-squared/Periodic/blob/beec00c4009cc0f01cd6a991a6d2d882521d3169/Properties.png)
+![Element Details](https://github.com/dan-squared/Periodic/blob/2dde2fa0629470479ed5a44d3b9073a39e9d5499/Temprature.png)
 - **Atomic Properties**: Electron configuration, atomic radius, ionization energy
 - **Historical Information**: Discovery, naming, and historical significance
 - **Visual Representations**: Atom structure visualizations
