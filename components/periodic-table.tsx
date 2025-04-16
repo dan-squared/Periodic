@@ -113,24 +113,24 @@ export default function PeriodicTable() {
         <div key="group-2" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">IIA</div>
         <div key="group-3" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">IIIB</div>
         <div key="group-4" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">IVB</div>
-        <div className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">VB</div>
-        <div className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">VIB</div>
-        <div className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">VIIB</div>
+        <div key="group-5" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">VB</div>
+        <div key="group-6" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">VIB</div>
+        <div key="group-7" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">VIIB</div>
         {/* VIIIB spanning 3 columns with a bracket */}
-        <div className="col-span-3 h-6 relative">
-          <div className="absolute top-0 left-0 right-0 h-1 border-t-2 border-l-2 border-r-2 border-foreground/40 rounded-t-sm"></div>
-          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center">
-            <div className="text-[10px] md:text-xs font-semibold">VIIIB</div>
+        <div key="group-8-10" className="col-span-3 h-6 relative">
+          <div key="group-8-10-top" className="absolute top-0 left-0 right-0 h-1 border-t-2 border-l-2 border-r-2 border-foreground/40 rounded-t-sm"></div>
+          <div key="group-8-10-bottom" className="absolute bottom-0 left-0 right-0 flex items-center justify-center">
+            <div key="group-8-10-text" className="text-[10px] md:text-xs font-semibold">VIIIB</div>
           </div>
         </div>
-        <div className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">IB</div>
-        <div className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">IIB</div>
-        <div className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">IIIA</div>
-        <div className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">IVA</div>
-        <div className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">VA</div>
-        <div className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">VIA</div>
-        <div className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">VIIA</div>
-        <div className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">
+        <div key="group-11" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">IB</div>
+        <div key="group-12" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">IIB</div>
+        <div key="group-13" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">IIIA</div>
+        <div key="group-14" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">IVA</div>
+        <div key="group-15" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">VA</div>
+        <div key="group-16" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">VIA</div>
+        <div key="group-17" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">VIIA</div>
+        <div key="group-18" className="col-span-1 h-6 flex items-center justify-center text-[10px] md:text-xs font-semibold">
           VIIIA
         </div>
       </div>
@@ -186,10 +186,10 @@ export default function PeriodicTable() {
         key="lanthanide-label"
         className="grid grid-cols-[40px_repeat(18,minmax(40px,1fr))] md:grid-cols-[40px_repeat(18,minmax(60px,1fr))] gap-1"
       >
-        <div className="col-span-3 flex items-center">
-          <div className="text-[10px] md:text-xs font-semibold">* Lanthanides</div>
+        <div key="lanthanide-label-text" className="col-span-3 flex items-center">
+          <div key="lanthanide-text" className="text-[10px] md:text-xs font-semibold">* Lanthanides</div>
         </div>
-        <div className="col-span-16"></div>
+        <div key="lanthanide-label-spacer" className="col-span-16"></div>
       </div>,
     )
 
@@ -200,7 +200,7 @@ export default function PeriodicTable() {
         key="lanthanides"
         className="grid grid-cols-[40px_repeat(18,minmax(40px,1fr))] md:grid-cols-[40px_repeat(18,minmax(60px,1fr))] gap-1 mt-1"
       >
-        <div className="col-span-3"></div> {/* Empty cells for spacing */}
+        <div key="lanthanide-spacer" className="col-span-3"></div> {/* Empty cells for spacing */}
         {lanthanides.map((element, index) => (
           <div key={`lanthanide-${element.atomicNumber}`} className="col-span-1">
             <ElementCell
@@ -211,7 +211,7 @@ export default function PeriodicTable() {
             />
           </div>
         ))}
-        <div className="col-span-1"></div> {/* Empty cell to complete the grid */}
+        <div key="lanthanide-end-spacer" className="col-span-1"></div> {/* Empty cell to complete the grid */}
       </div>
     )
     table.push(lanthanideRow)
@@ -222,10 +222,10 @@ export default function PeriodicTable() {
         key="actinide-label"
         className="grid grid-cols-[40px_repeat(18,minmax(40px,1fr))] md:grid-cols-[40px_repeat(18,minmax(60px,1fr))] gap-1 mt-2"
       >
-        <div className="col-span-3 flex items-center">
-          <div className="text-[10px] md:text-xs font-semibold">** Actinides</div>
+        <div key="actinide-label-text" className="col-span-3 flex items-center">
+          <div key="actinide-text" className="text-[10px] md:text-xs font-semibold">** Actinides</div>
         </div>
-        <div className="col-span-16"></div>
+        <div key="actinide-label-spacer" className="col-span-16"></div>
       </div>,
     )
 
@@ -236,7 +236,7 @@ export default function PeriodicTable() {
         key="actinides"
         className="grid grid-cols-[40px_repeat(18,minmax(40px,1fr))] md:grid-cols-[40px_repeat(18,minmax(60px,1fr))] gap-1 mt-1"
       >
-        <div className="col-span-3"></div> {/* Empty cells for spacing */}
+        <div key="actinide-spacer" className="col-span-3"></div> {/* Empty cells for spacing */}
         {actinides.map((element, index) => (
           <div key={`actinide-${element.atomicNumber}`} className="col-span-1">
             <ElementCell
@@ -247,7 +247,7 @@ export default function PeriodicTable() {
             />
           </div>
         ))}
-        <div className="col-span-1"></div> {/* Empty cell to complete the grid */}
+        <div key="actinide-end-spacer" className="col-span-1"></div> {/* Empty cell to complete the grid */}
       </div>
     )
     table.push(actinideRow)
