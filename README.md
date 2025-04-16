@@ -26,7 +26,7 @@ An educational web application featuring an interactive periodic table and compr
 - **Real-world Applications**: Common uses and applications
 
 ### Chemistry Lessons
-![Chemistry Lessons](https://i.imgur.com/Yp9kIf9)
+![Chemistry Lessons](https://github.com/dan-squared/Periodic/blob/e2f4b3eeb0bb7f87f64956e4f6a1ce0263583d15/Lessons.png)
 #### Organic Chemistry Lesson
 - **Interactive Functional Groups**: Visual exploration of different functional groups
 - **Molecular Structure Visualization**: 2D representations of chemical structures
