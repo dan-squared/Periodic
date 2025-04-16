@@ -23,14 +23,14 @@ export default function ChemicalBondingLesson() {
   const [electronDistance, setElectronDistance] = useState(50)
   const [showElectronTransfer, setShowElectronTransfer] = useState(false)
   const [showElectronSharing, setShowElectronSharing] = useState(false)
-  const [quizAnswers, setQuizAnswers] = useState({})
+  const [quizAnswers, setQuizAnswers] = useState<Record<number, string>>({})
   const [quizSubmitted, setQuizSubmitted] = useState(false)
-  const [showExplanation, setShowExplanation] = useState({})
-  const canvasRef = useRef(null)
-  const animationRef = useRef(null)
-  const londonForcesCanvasRef = useRef(null)
-  const dipoleCanvasRef = useRef(null)
-  const hydrogenBondCanvasRef = useRef(null)
+  const [showExplanation, setShowExplanation] = useState<Record<number, boolean>>({})
+  const canvasRef = useRef<HTMLCanvasElement | null>(null)
+  const animationRef = useRef<number | null>(null)
+  const londonForcesCanvasRef = useRef<HTMLCanvasElement | null>(null)
+  const dipoleCanvasRef = useRef<HTMLCanvasElement | null>(null)
+  const hydrogenBondCanvasRef = useRef<HTMLCanvasElement | null>(null)
   const [electronSharing, setElectronSharing] = useState(50)
   const [metallicProperty, setMetallicProperty] = useState("electrical")
   const [metallicDeformation, setMetallicDeformation] = useState(0)
@@ -55,6 +55,8 @@ export default function ChemicalBondingLesson() {
     if (canvasRef.current && activeSection === 2) {
       const canvas = canvasRef.current
       const ctx = canvas.getContext("2d")
+      if (!ctx) return
+      
       let angle = 0
 
       const drawCovalentBond = () => {
@@ -113,6 +115,8 @@ export default function ChemicalBondingLesson() {
     if (londonForcesCanvasRef.current && activeSection === 4) {
       const canvas = londonForcesCanvasRef.current
       const ctx = canvas.getContext("2d")
+      if (!ctx) return
+      
       let time = 0
 
       const drawLondonForces = () => {
@@ -215,6 +219,8 @@ export default function ChemicalBondingLesson() {
     if (dipoleCanvasRef.current && activeSection === 4) {
       const canvas = dipoleCanvasRef.current
       const ctx = canvas.getContext("2d")
+      if (!ctx) return
+      
       let time = 0
 
       const drawDipoleInteractions = () => {
@@ -308,6 +314,8 @@ export default function ChemicalBondingLesson() {
     if (hydrogenBondCanvasRef.current && activeSection === 4) {
       const canvas = hydrogenBondCanvasRef.current
       const ctx = canvas.getContext("2d")
+      if (!ctx) return
+      
       let time = 0
 
       const drawHydrogenBonding = () => {
@@ -429,7 +437,7 @@ export default function ChemicalBondingLesson() {
     }
   }
 
-  const handleQuizAnswer = (questionId, answer) => {
+  const handleQuizAnswer = (questionId: number, answer: string) => {
     setQuizAnswers({
       ...quizAnswers,
       [questionId]: answer,
@@ -440,10 +448,10 @@ export default function ChemicalBondingLesson() {
     setQuizSubmitted(true)
   }
 
-  const toggleExplanation = (questionId) => {
+  const toggleExplanation = (questionId: number) => {
     setShowExplanation({
       ...showExplanation,
-      [questionId]: !showExplanation[questionId],
+      [questionId]: !showExplanation[questionId] || false,
     })
   }
 
@@ -537,7 +545,7 @@ export default function ChemicalBondingLesson() {
     return correctCount
   }
 
-  const calculateBondEnergy = (forceType, temp, distance) => {
+  const calculateBondEnergy = (forceType: 'london' | 'dipole' | 'hydrogen', temp: number, distance: number) => {
     // Base energy values in kJ/mol
     const baseEnergies = {
       london: 5,
@@ -560,14 +568,24 @@ export default function ChemicalBondingLesson() {
     return energy
   }
 
-  // Add the style tag to inject the animation
-  // Add this right before the return statement
-  const styleTag = document.createElement("style")
-  if (typeof window !== "undefined" && !document.getElementById("electron-flow-animation")) {
-    styleTag.id = "electron-flow-animation"
-    styleTag.innerHTML = electronFlowAnimation
-    document.head.appendChild(styleTag)
-  }
+  // Add the electron flow animation via useEffect
+  useEffect(() => {
+    // Add the style tag to inject the animation
+    const styleTag = document.createElement("style")
+    if (!document.getElementById("electron-flow-animation")) {
+      styleTag.id = "electron-flow-animation"
+      styleTag.innerHTML = electronFlowAnimation
+      document.head.appendChild(styleTag)
+    }
+
+    // Clean up function
+    return () => {
+      const existingTag = document.getElementById("electron-flow-animation")
+      if (existingTag) {
+        existingTag.remove()
+      }
+    }
+  }, []);
 
   return (
     <div className="space-y-8">
