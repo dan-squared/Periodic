@@ -22,7 +22,6 @@ An educational web application featuring an interactive periodic table and compr
 - **Atomic Properties**: Electron configuration, atomic radius, ionization energy
 - **Historical Information**: Discovery, naming, and historical significance
 - **Visual Representations**: Atom structure visualizations
-![Atom Visualization](https://i.imgur.com/LiIMjnt)
 - **Real-world Applications**: Common uses and applications
 
 ### Chemistry Lessons
