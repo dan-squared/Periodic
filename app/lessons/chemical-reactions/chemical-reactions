@@ -1,0 +1,10 @@
+import { Lesson } from '@/app/lessons/lesson';
+import ChemicalReactions from './chemical-reactions.mdx';
+
+export const chemicalReactionsLesson = new Lesson(
+  'chemical-reactions',
+  'Chemical Reactions',
+  '/lessons/chemical-reactions',
+  ChemicalReactions,
+);
+
