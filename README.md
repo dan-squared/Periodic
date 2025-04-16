@@ -45,7 +45,12 @@ An educational web application featuring an interactive periodic table and compr
   - Dipole-dipole interactions
   - Hydrogen bonding
 - **Interactive Controls**: Adjust parameters to see effects on bonding
-
+  
+#### Chemistry Calculators
+- **Molar Mass Calculator**: Instantly calculate molar mass for any chemical formula
+- **Stoichiometry Calculator**: Calculate reactants, products, and limiting reagents
+- **Acid-Base Equilibrium**: pH calculations and titration curve visualization
+- **Gas Law Calculator**: PV=nRT and related calculations with visual representations
 
 ## Technical Stack
 
