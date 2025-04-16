@@ -3,7 +3,7 @@
 
 An educational web application featuring an interactive periodic table and comprehensive chemistry lessons built with Next.js, React, and TypeScript.
 
-![Interactive Periodic Table](https://ibb.co/MkXR83Hz)
+![Interactive Periodic Table](https://github.com/dan-squared/Periodic/blob/7ff54f1c8d0f4333883f9178cfd1c8497f45d9bb/PT.png)
 
 ## Features
 
