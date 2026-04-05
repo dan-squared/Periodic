@@ -116,7 +116,7 @@ export default function PeriodicTable() {
     <div className="min-h-screen bg-[#f5f5f5] flex flex-col relative">
 
       {/* Header Space */}
-      <div className="py-6 px-4 text-center">
+      <div className="pt-4 pb-2 px-4 text-center">
         <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold uppercase tracking-widest text-neutral-800">
           The Periodic Table of Elements
         </h1>
@@ -133,10 +133,10 @@ export default function PeriodicTable() {
         </div>
       )}
 
-      <div className="flex-1 px-4 pb-12 overflow-x-auto">
-        <div className="min-w-[1000px] max-w-[1400px] mx-auto">
+      <div className="flex-1 px-4 pb-8 overflow-x-auto">
+        <div className="min-w-[900px] max-w-[1240px] mx-auto">
           {!showList ? (
-            <div className="grid grid-cols-[repeat(18,minmax(0,1fr))] grid-rows-[repeat(10,auto)] gap-1.5 items-start justify-center">
+            <div className="grid grid-cols-[repeat(18,minmax(0,1fr))] grid-rows-[repeat(10,auto)] gap-1 items-start justify-center">
               {renderGridElements()}
 
               {/* Spacer for row 8 to separate Lanthanides and Actinides */}
@@ -151,7 +151,7 @@ export default function PeriodicTable() {
               </div>
 
               {/* Legends Section */}
-              <div className="col-start-4 col-end-13 row-start-1 row-end-4 flex flex-col xl:flex-row items-start xl:items-center justify-start pl-2 md:pl-12 gap-8 xl:gap-8 py-4">
+              <div className="col-start-4 col-end-13 row-start-1 row-end-4 flex flex-col xl:flex-row items-start xl:items-center justify-start pl-2 md:pl-12 gap-6 xl:gap-8 py-2">
                 <SymbolKey />
               </div>
             </div>
@@ -161,7 +161,7 @@ export default function PeriodicTable() {
           
           {/* Category Key / Filters */}
           {!showList && (
-            <div className="mt-8 pt-8 border-t border-black/10 flex flex-col items-center justify-center gap-6 max-w-[1000px] mx-auto pb-4">
+            <div className="mt-6 pt-6 border-t border-black/10 flex flex-col items-center justify-center gap-4 max-w-[800px] mx-auto pb-4">
               <div className="flex flex-col items-center gap-y-4 w-full">
                 <div className="text-center text-[11px] font-extrabold text-neutral-400 uppercase tracking-widest">
                   Chemical Series
@@ -188,7 +188,7 @@ export default function PeriodicTable() {
                 </div>
               </div>
 
-              <div className="flex flex-col items-center gap-y-3 w-full border-t border-black/5 pt-6">
+              <div className="flex flex-col items-center gap-y-3 w-full border-t border-black/5 pt-4">
                 <div className="text-center text-[11px] font-extrabold text-neutral-400 uppercase tracking-widest">
                   Block
                 </div>

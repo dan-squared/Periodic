@@ -1,118 +1,116 @@
+# ⚛️ Interactive Periodic Table
 
- # Interactive Periodic Table Application
+An advanced, educational web application providing a high-fidelity, interactive exploration of the chemical elements. Built with a modern technical stack of **Next.js 15**, **React**, and **TypeScript**, this application combines scientific accuracy with a premium user experience.
 
-An educational web application featuring an interactive periodic table and comprehensive chemistry lessons built with Next.js, React, and TypeScript.
+---
 
-![Interactive Periodic Table](https://github.com/dan-squared/Periodic/blob/7ff54f1c8d0f4333883f9178cfd1c8497f45d9bb/PT.png)
+## 🌟 Key Features
 
-## Features
+### 1. High-Fidelity Periodic Table Grid
+*   **Complete Dataset**: Comprehensive data for all 118 elements, from Hydrogen to Oganesson.
+*   **Dynamic Scaling**: A responsive grid system that maintains readability across ultra-wide monitors and mobile devices.
+*   **Intelligent Layout**: accurately represents the standard IUPAC layout, including the Lanthanide and Actinide series with proper positioning.
+*   **Symbol Key**: An integrated interactive legend that explains exactly how to read each element cell (Atomic Number, Symbol, Name, and Relative Atomic Mass).
 
-### Interactive Periodic Table
-![Periodic Table Interface](https://github.com/dan-squared/Periodic/blob/cf09a96c7480db539fb49013a008cc78e4c3baf9/Properties.png)
-- **Complete Element Data**: All 118 elements with detailed properties including atomic number, symbol, name, mass, electron configuration, and more
-- **Interactive Element Cells**: Click on any element to view comprehensive details
-- **Visual Element Categories**: Color-coded element categorization (metals, non-metals, metalloids, etc.)
-- **Responsive Design**: Optimized for both desktop and mobile viewing
-- **Element Searching**: Find elements through search functionality
-- **Element Filtering**: Filter elements by category, state, or properties
+### 2. Multi-Dimensional Filtering System
+*   **Chemical Series Categories**: Instantly highlight groups such as Alkali Metals, Noble Gases, Transition Metals, and more using a color-coded legend.
+*   **Orbital Block Filtering**: Dive into quantum chemistry by filtering elements based on their electron orbital blocks (**s, p, d, f**).
+*   **Interactive Overlays**: When a filter is applied, non-matching elements are subtly dimmed and desaturated using CSS filters, allowing the user to focus on specific chemical families.
 
-### Detailed Element Information
-- **Physical Properties**: Melting point, boiling point, density
-![Element Details](https://github.com/dan-squared/Periodic/blob/2dde2fa0629470479ed5a44d3b9073a39e9d5499/Temprature.png)
-- **Atomic Properties**: Electron configuration, atomic radius, ionization energy
-- **Historical Information**: Discovery, naming, and historical significance
-- **Visual Representations**: Atom structure visualizations
-- **Real-world Applications**: Common uses and applications
+### 3. Deep-Dive Element Insights
+*   **Modal Discovery**: Clicking any element opens a rich, immersive modal containing:
+    *   **Physical Properties**: In-depth data on melting points, boiling points, density, and standard states.
+    *   **Atomic Characteristics**: Insights into electron configurations, atomic radii, and ionization energy levels.
+    *   **Historical Context**: Information regarding the element's discovery and naming history.
+*   **Atom Visualizations**: Clean, symbolic representations of atomic structures.
 
-### Chemistry Lessons
-![Chemistry Lessons](https://github.com/dan-squared/Periodic/blob/e2f4b3eeb0bb7f87f64956e4f6a1ce0263583d15/Lessons.png)
-#### Organic Chemistry Lesson
-- **Interactive Functional Groups**: Visual exploration of different functional groups
-- **Molecular Structure Visualization**: 2D representations of chemical structures
-- **IUPAC Nomenclature Guide**: Systematic naming system explanations
-- **Isomerism Exploration**: Interactive visualization of different isomer types
-- **Self-assessment Quizzes**: Test knowledge with interactive quizzes
+### 4. Premium UX & Design
+*   **Glassmorphic Interface**: A clean, modern aesthetic utilizing subtle blurs and refined borders.
+*   **Fluid Animations**: Powered by **Framer Motion**, featuring smooth transitions, hover effects, and entrance animations that make the table feel alive.
+*   **Mobile-First Adaptability**: Includes an orientation-aware system that prompts users to rotate their device for the best viewing experience, ensuring the table is always usable.
 
-#### Chemical Bonding Lesson
-- **Animated Bond Visualizations**: Dynamic animations for different bond types
-- **Interactive Molecular Simulations**: Manipulate atoms to see bonding effects
-- **Comprehensive Content**: Covers ionic, covalent, metallic bonds, and intermolecular forces
-- **Canvas-based Animations**: Custom HTML5 Canvas animations for:
-  - Electron transfer in ionic bonds
-  - Electron sharing in covalent bonds
-  - Sea of electrons in metallic bonds
-  - London dispersion forces
-  - Dipole-dipole interactions
-  - Hydrogen bonding
-- **Interactive Controls**: Adjust parameters to see effects on bonding
-  
-#### Chemistry Calculators
-- **Molar Mass Calculator**: Instantly calculate molar mass for any chemical formula
-- **Stoichiometry Calculator**: Calculate reactants, products, and limiting reagents
-- **Acid-Base Equilibrium**: pH calculations and titration curve visualization
-- **Gas Law Calculator**: PV=nRT and related calculations with visual representations
+---
 
-## Technical Stack
+## 🛠 Technical Architecture
 
-- **Framework**: Next.js 15+
-- **Language**: TypeScript
-- **UI Components**: Custom Shadcn UI components
-- **Styling**: Tailwind CSS for responsive design
-- **Animations**: Framer Motion for component transitions
-- **Canvas Animations**: Custom HTML5 Canvas for molecular visualizations
-- **State Management**: React hooks for local state management
+This project is built using professional-grade tools to ensure performance, type safety, and maintainability:
 
-## Installation and Setup
+*   **Next.js 15 (App Router)**: Utilizing the latest server-side rendering and routing capabilities for optimal SEO and performance.
+*   **TypeScript**: Strict type definitions for element data and component props to prevent runtime errors.
+*   **Tailwind CSS**: A utility-first CSS framework used to build a bespoke design system without the bloat of traditional UI libraries.
+*   **Framer Motion**: Orchestrating complex layout animations and interactive feedback.
+*   **Lucide React**: Providing a consistent, high-quality iconography set.
+*   **Radix UI Primitives**: Ensuring accessibility (A11y) and keyboard navigation for complex UI patterns like dialogs and tooltips.
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
-- npm
+*   **Node.js**: Version 18.17 or higher
+*   **npm**: Version 9 or higher
 
-### Installation Steps
+### Installation
 
-1. Clone the repository:
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/dan-squared/Periodic.git
+    cd Periodic
+    ```
 
-2. Install dependencies:
-```bash
-npm install
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Environment Configuration**
+    *(Optional)* Create a `.env.local` file for any custom configuration, though none is required for core functionality.
+
+4.  **Launch the Development Server**
+    ```bash
+    npm run dev
+    ```
+    Access the application at [http://localhost:3000](http://localhost:3000).
+
+---
+
+## 📁 Project Structure
+
+```text
+Periodic/
+├── app/                  # Next.js App Router directory
+│   ├── layout.tsx        # Global fonts (Roboto Slab, Inter) and root providers
+│   └── page.tsx          # Main entry point hosting the PeriodicTable component
+├── components/           # Reusable UI Architecture
+│   ├── element-cell.tsx  # Optimized individual element card with Hover/Tap states
+│   ├── element-details.tsx # Immersive full-screen/modal detail view
+│   ├── periodic-table.tsx # The master grid, filtering logic, and responsive handlers
+│   ├── symbol-key.tsx    # SVG-based interactive guide for element cell data
+│   └── ui/               # Lower-level primitive components
+├── lib/                  # Application Logic & Data
+│   ├── element-data.ts   # Centralized chemical element dataset and TypeScript interfaces
+│   └── utils.ts          # Color mapping algorithms and Tailwind merging utilities
+└── styles/               # Global styling directives and Tailwind configuration
 ```
 
-3. Run the development server:
-```bash
-npm run dev
-```
+---
 
-4. Open your browser and navigate to `http://localhost:3000`
+## 🤝 Contributing
 
+We welcome contributions from the community, whether they are bug fixes, feature requests, or improvements to the dataset!
 
+1.  **Fork** the project.
+2.  **Create** your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3.  **Commit** your changes (`git commit -m 'Add some AmazingFeature'`).
+4.  **Push** to the Branch (`git push origin feature/AmazingFeature`).
+5.  **Open** a Pull Request.
 
-## Project Structure
+---
 
-```
-/
-├── app/                  # Next.js app directory
-│   ├── lessons/          # Chemistry lesson pages
-│   └── page.tsx          # Home page with periodic table
-├── components/           # React components
-│   ├── element-cell.tsx  # Individual element cell component
-│   ├── element-details.tsx # Element details modal
-│   ├── periodic-table.tsx # Main periodic table component
-│   ├── lessons/          # Lesson-specific components
-│   └── ui/               # UI components (buttons, cards, etc.)
-├── lib/                  # Utility functions and data
-│   └── element-data.ts   # Element data and types
-├── public/               # Static assets
-└── styles/               # Global styles
-```
+## 📄 License
 
-## Contributing
+This project is open-source and available under the [MIT License](LICENSE).
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+---
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-
+*Developed with ❤️ for Science and Education.*
