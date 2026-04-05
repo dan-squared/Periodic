@@ -124,13 +124,14 @@ export default function AtomicStructureVisualization({
                       style={{
                         top: "50%",
                         left: "50%",
-                        width: 10,
-                        height: 10,
+                        width: 9,
+                        height: 9,
                         backgroundColor: color,
+                        border: '1.5px solid white',
                         transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
-                        boxShadow: `0 0 8px ${color}`,
-                        opacity: isActive ? 1 : 0.8,
-                        scale: isActive ? 1.2 : 1,
+                        boxShadow: 'none',
+                        opacity: 1,
+                        scale: isActive ? 1.3 : 1,
                       }}
                     >
                       {showLabels && isActive && (
@@ -153,7 +154,8 @@ export default function AtomicStructureVisualization({
             style={{
               width: 76,
               height: 76,
-              boxShadow: `0 0 20px ${color}20, inset 0 0 10px rgba(0,0,0,0.05)`,
+              boxShadow: `none`,
+              border: `2px solid black`,
             }}
             animate={{
               scale: isSpinning ? [1, 1.02, 1] : 1,
