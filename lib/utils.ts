@@ -18,10 +18,10 @@ export function getCategoryColor(category: ElementGroup): string {
       return "#c5ff6b"
     case "metalloid":
       return "#6bff9e"
-    case "nonmetal":
-      return "#6bffff"
-    case "halogen":
-      return "#6b9eff"
+    case "diatomic-nonmetal":
+      return "#6beeff"
+    case "polyatomic-nonmetal":
+      return "#6bffdd"
     case "noble-gas":
       return "#c56bff"
     case "lanthanide":
@@ -30,6 +30,21 @@ export function getCategoryColor(category: ElementGroup): string {
       return "#ff6b9e"
     default:
       return "#cccccc"
+  }
+}
+
+export function getBlockColor(block: string): string {
+  switch (block) {
+    case "s":
+      return "#C52828"
+    case "p":
+      return "#2888C5"
+    case "d":
+      return "#F2A01D"
+    case "f":
+      return "#88C528"
+    default:
+      return "#e5e7eb"
   }
 }
 

@@ -4,7 +4,9 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { ArrowLeft, ArrowRight, Home } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import ElementPropertyCard from "./element-property-card"
+import dynamic from "next/dynamic"
+
+const ElementPropertyCard = dynamic(() => import("./element-property-card"), { ssr: false })
 import { elements, type Element } from "@/lib/element-data"
 import Link from "next/link"
 

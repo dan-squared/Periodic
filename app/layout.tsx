@@ -1,19 +1,22 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next/types"
 import "./globals.css"
-import { Space_Mono } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
+import { Outfit, Roboto_Slab } from "next/font/google"
 
-const spaceMono = Space_Mono({
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+})
+
+const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-space-mono",
+  variable: "--font-roboto-slab",
 })
 
 export const metadata: Metadata = {
   title: "Interactive Periodic Table",
   description: "Explore the elements with this interactive periodic table",
-    generator: 'v0.dev'
 }
 
 export const viewport: Viewport = {
@@ -29,16 +32,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${spaceMono.variable} font-mono`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          {children}
-        </ThemeProvider>
+    <html lang="en">
+      <body className={`${outfit.variable} ${robotoSlab.variable} font-sans bg-background text-foreground antialiased`}>
+        {children}
       </body>
     </html>
   )
 }
-
-
-
-import './globals.css'

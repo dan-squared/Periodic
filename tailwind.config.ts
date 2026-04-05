@@ -22,7 +22,8 @@ const config: Config = {
         xs: "480px",
       },
       fontFamily: {
-        mono: ["var(--font-space-mono)", "monospace"],
+        sans: ["var(--font-outfit)", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["var(--font-space-mono)", "monospace"], // Kept as fallback if still needed elsewhere
       },
       gridTemplateColumns: {
         18: "repeat(18, minmax(0, 1fr))",
@@ -66,6 +67,10 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        "neo": "-4px 4px 0px 0px #000",
+        "neo-sm": "-2px 2px 0px 0px #000",
       },
       keyframes: {
         "accordion-down": {

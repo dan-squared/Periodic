@@ -2,45 +2,55 @@
 
 import { motion } from "framer-motion"
 import type { Element } from "@/lib/element-data"
-import { getCategoryColor } from "@/lib/utils"
+import { getCategoryColor, cn } from "@/lib/utils"
 
 interface ElementCellProps {
   element: Element
   onClick: (element: Element) => void
   isFiltered: boolean
-  showElementNames?: boolean
 }
 
-export default function ElementCell({ element, onClick, isFiltered, showElementNames = false }: ElementCellProps) {
-  const borderColor = getCategoryColor(element.category)
+export default function ElementCell({ element, onClick, isFiltered }: ElementCellProps) {
+  const categoryColor = getCategoryColor(element.category)
 
   return (
     <motion.div
-      className={`w-full h-16 md:h-20 p-1 border rounded cursor-pointer relative transition-all duration-300 ${
-        isFiltered ? "opacity-20 scale-95" : "opacity-100"
-      }`}
+      className={cn(
+        "w-full aspect-[10/11] cursor-pointer relative transition-transform bg-white border-[2px] border-black rounded-[4px] flex flex-col items-center justify-center overflow-hidden",
+        isFiltered 
+          ? "opacity-20 grayscale" 
+          : "hover:z-50"
+      )}
       style={{
-        borderColor: borderColor,
-        borderTopWidth: "3px",
+        boxShadow: isFiltered ? "none" : "-3px 3px 0 0 #000",
       }}
-      whileHover={{ scale: 1.05, zIndex: 10 }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={isFiltered ? undefined : { scale: 1.05 }}
+      whileTap={{ scale: 0.97 }}
       onClick={() => onClick(element)}
       layout
     >
-      <div className="text-[8px] sm:text-[10px] md:text-xs font-semibold absolute top-1 left-1">
+      <div className="absolute top-0.5 left-1 text-[10px] font-bold leading-none text-black font-roboto-slab">
         {element.atomicNumber}
       </div>
-      <div className="flex flex-col items-center justify-center h-full">
-        <div className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold">{element.symbol}</div>
-        {showElementNames && (
-          <div className="text-[6px] sm:text-[7px] md:text-[8px] lg:text-[9px] truncate max-w-full">{element.name}</div>
+
+      <div
+        className={cn(
+          "absolute top-0 right-0 w-[24%] h-[24%] border-l-[2px] border-b-[2px] border-black rounded-bl-[4px] rounded-tr-[2px]"
         )}
-        <div className="text-[6px] sm:text-[8px] md:text-[10px] lg:text-xs mt-0.5 text-muted-foreground">
-          {element.atomicMass.toFixed(1)}
-        </div>
+        style={{ backgroundColor: categoryColor }}
+      />
+
+      <div className="text-xl sm:text-2xl font-bold leading-none mt-2 text-black font-roboto-slab truncate w-full flex justify-center px-1 shrink-0">
+        {element.symbol}
+      </div>
+
+      <div className="text-[7px] font-bold tracking-tight uppercase mt-1 leading-none px-0.5 text-center text-black truncate w-full shrink-0">
+        {element.name}
+      </div>
+
+      <div className="text-[6px] font-medium mt-0.5 leading-none text-black/70 truncate w-full text-center shrink-0">
+        {element.atomicMass.toFixed(3)}
       </div>
     </motion.div>
   )
 }
-
